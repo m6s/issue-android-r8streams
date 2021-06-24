@@ -2,8 +2,12 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven { // https://issuetracker.google.com/issues/191810497
+            url 'https://storage.googleapis.com/r8-releases/raw'
+        }
     }
     dependencies {
+        classpath 'com.android.tools:r8:3.0.55' // https://issuetracker.google.com/issues/191810497
         classpath "com.android.tools.build:gradle:7.0.0-beta04"
     }
 }
